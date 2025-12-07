@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息卡片展示</title>
+    <!-- 引入Tailwind CSS简化样式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入图标库 -->
+   <!-- <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <style>
+        /* 自定义悬停延长特效 */
+        .btn-expand {
+            /* 初始宽度：128px (w-32 = 32*4px = 128px) */
+            width: 128px;
+            /* 过渡动画：宽度变化 0.3秒 缓动 */
+            transition: width 0.3s ease;
+            /* 移除a标签默认下划线 */
+            text-decoration: none;
+        }
+        .btn-expand:hover {
+            /* 延长1/5长度：128px + 128/5 = 153.6px */
+            width: 153.6px;
+            /* 可选：hover时加深背景色增强反馈 */
+            filter: brightness(0.95);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto">
+        <!-- 微博卡片（跳转至新浪微博官网） -->
+        <div class="flex items-center bg-white rounded-md overflow-hidden mb-4 shadow-sm">
+            <div class="flex-1 p-4 flex items-center gap-3">
+                <i class="fa fa-weibo text-red-500 text-xl"></i>
+                <span>自媒体新浪微博</span>
+            </div>
+            <!-- 替换为a标签，添加href指定网址 -->
+            <a href="https://weibo.com/" class="btn-expand bg-red-500 text-white py-3 font-medium text-center" target="_blank">
+                新浪微博
+            </a>
+        </div>
+
+        <!-- 腾讯微博卡片（跳转至腾讯微博相关页面） -->
+        <div class="flex items-center bg-white rounded-md overflow-hidden mb-4 shadow-sm">
+            <div class="flex-1 p-4 flex items-center gap-3">
+                <i class="fa fa-qq text-blue-500 text-xl"></i>
+                <span>自媒体腾讯微博</span>
+            </div>
+            <a href="https://t.qq.com/" class="btn-expand bg-blue-500 text-white py-3 font-medium text-center" target="_blank">
+                腾讯微博
+            </a>
+        </div>
+
+        <!-- QQ号卡片（可跳转至QQ官网或自定义链接） -->
+        <div class="flex items-center bg-white rounded-md overflow-hidden mb-4 shadow-sm">
+            <div class="flex-1 p-4 flex items-center gap-3">
+                <i class="fa fa-qq text-blue-400 text-xl"></i>
+                <span>68281734</span>
+            </div>
+            <a href="https://im.qq.com/" class="btn-expand bg-blue-400 text-white py-3 font-medium text-center" target="_blank">
+                QQ号
+            </a>
+        </div>
+
+        <!-- 邮箱卡片（跳转至QQ邮箱） -->
+        <div class="flex items-center bg-white rounded-md overflow-hidden mb-4 shadow-sm">
+            <div class="flex-1 p-4 flex items-center gap-3">
+                <i class="fa fa-envelope text-green-500 text-xl"></i>
+                <span>cvco@qq.com</span>
+            </div>
+            <a href="https://mail.qq.com/" class="btn-expand bg-green-500 text-white py-3 font-medium text-center" target="_blank">
+                邮箱
+            </a>
+        </div>
+
+        <!-- 微信公众号卡片（跳转至微信公众平台） -->
+        <div class="flex items-center bg-white rounded-md overflow-hidden shadow-sm">
+            <div class="flex-1 p-4 flex items-center gap-3">
+                <i class="fa fa-wechat text-green-600 text-xl"></i>
+                <span>夜落繁华</span>
+            </div>
+            <a href="https://mp.weixin.qq.com/" class="btn-expand bg-green-600 text-white py-3 font-medium text-center" target="_blank">
+                微信公众号
+            </a>
+        </div>
+    </div>
+</body>
+</html>
